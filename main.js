@@ -1,4 +1,6 @@
 let words = document.querySelectorAll(".word");
+const vw = Math.max(document.documentElement.clientWidth || 0, window.innerWidth || 0)/100
+const vh = Math.max(document.documentElement.clientHeight || 0, window.innerHeight || 0)/100
 var selected_count = 0;
 var selected = new Set();
 var parsedData = []
@@ -525,6 +527,11 @@ function adjustFontSize() {
             fontSize--; // Decrease font size
             word.style.fontSize = fontSize + 'px';
         }
+        let height = 5.82*vw
+        let padding = (height-fontSize)/2
+        height=height-padding
+        word.style.height=height
+        word.style.paddingTop=padding
 
         // Optionally, increase the font size if it fits
         
