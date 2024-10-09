@@ -527,12 +527,18 @@ function adjustFontSize() {
             fontSize--; // Decrease font size
             word.style.fontSize = fontSize + 'px';
         }
+        word.style.paddingTop='0px'
+        word.style.paddingBottom='0px'
+        console.log(word)
+        let pfs=fontSize
+        fontSize=word.scrollHeight
+        
         try {
             let height = 5.82*vw
             let padding = (height-fontSize)/2
             height=height-padding
-            word.style.paddingTop=padding+(0.75*vw)-(0.14*fontSize) + 'px'
-            word.style.paddingBottom=padding+(0.75*vw)+(0.14*fontSize) + 'px'
+            word.style.paddingTop=padding+(0.75*vw)+(0.03*pfs) + 'px'
+            word.style.paddingBottom=padding+(0.75*vw)-(0.03*pfs) + 'px'
             word.style.height=fontSize + 'px'
         } catch(error) {
             logToDebugger("ERROR: "+error.stack)
@@ -545,6 +551,8 @@ function adjustFontSize() {
 
 // Run the adjustment function every 100 milliseconds
 setInterval(adjustFontSize, 100);
+
+
 
 
 
