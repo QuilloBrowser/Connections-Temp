@@ -527,11 +527,16 @@ function adjustFontSize() {
             fontSize--; // Decrease font size
             word.style.fontSize = fontSize + 'px';
         }
-        let height = 5.82*vw
-        let padding = (height-fontSize)/2
-        height=height-padding
-        word.style.paddingTop=padding + 'px'
-        word.style.paddingBottom=padding + 'px'
+        try {
+            let height = 5.82*vw
+            let padding = (height-fontSize)/2
+            height=height-padding
+            word.style.paddingTop=padding + 'px'
+            word.style.paddingBottom=padding + 'px'
+            word.style.height=fontSize + 'px'
+        } catch(error) {
+            logToDebugger("ERROR: "+error.stack)
+        }
 
         // Optionally, increase the font size if it fits
         
