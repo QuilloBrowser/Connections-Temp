@@ -517,23 +517,24 @@ function adjustFontSize() {
     const words = document.querySelectorAll('.word');
     
     words.forEach(word => {
-        let fontSize = maxFontSize
-        while (word.scrollWidth <= word.clientWidth && fontSize<=maxFontSize) {
-            fontSize++; // Increase font size
-            word.style.fontSize = fontSize + 'px';
-        }
-        // Check if text overflows
-        while (word.scrollWidth > word.clientWidth && fontSize > 5) {
-            fontSize--; // Decrease font size
-            word.style.fontSize = fontSize + 'px';
-        }
-        word.style.paddingTop='0px'
-        word.style.paddingBottom='0px'
-        console.log(word)
-        let pfs=fontSize
-        fontSize=word.scrollHeight
-        
         try {
+            let fontSize = maxFontSize
+            while (word.scrollWidth <= word.clientWidth && fontSize<=maxFontSize) {
+                fontSize++; // Increase font size
+                word.style.fontSize = fontSize + 'px';
+            }
+            // Check if text overflows
+            while (word.scrollWidth > word.clientWidth && fontSize > 5) {
+                fontSize--; // Decrease font size
+                word.style.fontSize = fontSize + 'px';
+            }
+            word.style.paddingTop='0px'
+            word.style.paddingBottom='0px'
+            console.log(word)
+            let pfs=fontSize
+            fontSize=word.scrollHeight
+            
+            
             let height = 5.82*vw
             let padding = (height-fontSize)/2
             height=height-padding
