@@ -530,8 +530,8 @@ function adjustFontSize() {
         let height = 5.82*vw
         let padding = (height-fontSize)/2
         height=height-padding
-        word.style.height=height
-        word.style.paddingTop=padding
+        word.style.height=height + 'px'
+        word.style.paddingTop=padding + 'px'
 
         // Optionally, increase the font size if it fits
         
