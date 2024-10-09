@@ -3,8 +3,8 @@ body {
 }
 .word {
     padding: 0.75vw;
-    width: 5.57vw; /* Set fixed width */
-    height: 5.57vw; /* Set fixed height */
+    width: 5.82vw; /* Set fixed width */
+    height: 5.82vw; /* Set fixed height */
     border-radius: 1.17vw;
     display: inline-block; /* Flexbox to center text */
     align-content: center; /* Center horizontally */
