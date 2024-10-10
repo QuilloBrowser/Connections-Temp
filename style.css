@@ -7,7 +7,6 @@ body {
     height: 5.82vw; /* Set fixed height */
     border-radius: 1.17vw;
     display: inline-block; /* Flexbox to center text */
-    align-content: center; /* Center horizontally */
     overflow: hidden; /* Hide overflow if the text is too long */
     /*word-wrap: break-word; /* Break words if too long */
     margin: 0.29vw;
