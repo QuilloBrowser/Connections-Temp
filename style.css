@@ -10,7 +10,6 @@ body {
     overflow: hidden; /* Hide overflow if the text is too long */
     /*word-wrap: break-word; /* Break words if too long */
     margin: 0.1vw;
-    margin-bottom: 0.1vw;
     background-color: #EFEFE6;
     font-family: 'Nunito';
     cursor: pointer;
