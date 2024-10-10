@@ -530,6 +530,7 @@ function adjustFontSize() {
             }
             word.style.paddingTop='0px'
             word.style.paddingBottom='0px'
+            word.style.height='0px'
             console.log(word)
             let pfs=fontSize
             fontSize=word.scrollHeight
