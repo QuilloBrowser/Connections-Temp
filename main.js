@@ -54,6 +54,7 @@ function shuffle(array) {
       [array[currentIndex], array[randomIndex]] = [
         array[randomIndex], array[currentIndex]];
     }
+    
   }
 function parseJsonTags(inputString) {
     console.log(inputString);
@@ -294,6 +295,8 @@ document.getElementById("shuffle").addEventListener("mousedown", function() {
         word.innerText=madewords[i];
         i++
     })
+    
+    adjustFontSize()
 })
 function showall() {
 
@@ -512,6 +515,7 @@ document.getElementById("submit").addEventListener("mousedown", function() {
     } catch(error) {
         logToDebugger("ERROR: "+error.stack)
     }
+    adjustFontSize()
 })
 function adjustFontSize() {
     const words = document.querySelectorAll('.word');
@@ -553,6 +557,7 @@ function adjustFontSize() {
 
 // Run the adjustment function every 100 milliseconds
 setInterval(adjustFontSize, 100);
+adjustFontSize()
 
 
 
